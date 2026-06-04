@@ -56,13 +56,11 @@
   }
   .fact-card p { font-size: 14px; line-height: 1.5; color: #333; }
 
-  /* ── Two-column section: text left, image+callout right ── */
-  .two-col {
-    display: grid; grid-template-columns: 1fr 340px; gap: 28px; align-items: start;
-  }
-  .two-col-text { display: flex; flex-direction: column; gap: 28px; }
-
-  /* section label + heading shared style */
+  /* ── Merged card: full-width photo + callout ── */
+  .partner-photo { margin: -28px -26px 0; overflow: hidden; border-radius: 12px 12px 0 0; }
+  .partner-photo img { width: 100%; height: 260px; object-fit: cover; object-position: center 20%; display: block; }
+  .callout { border-left: 6px solid var(--red); background: var(--white); padding: 16px 18px; font-size: 14px; line-height: 1.6; border-radius: 0 0 8px 8px; margin: 0 0 28px; }
+  .section-divider { border: none; border-top: 2px solid var(--border); margin: 28px 0; }
   .section-label {
     font-size: 12px; letter-spacing: .13em; text-transform: uppercase;
     color: var(--red); font-weight: 800; margin-bottom: 6px; display: block;
@@ -73,13 +71,7 @@
   }
   .section-body { font-size: 15px; line-height: 1.7; color: #333; }
 
-  /* ── Partnership text block ── */
-  .partnership-block { display: flex; flex-direction: column; gap: 0; }
-
-  /* ── Virtual solutions text block ── */
-  .vs-block { display: flex; flex-direction: column; gap: 12px; }
-
-  /* ── Card rotator ── */
+  /* ── Right column: image card + callout ── */
   .cva-card-rotator { width: 100%; }
   .cva-card-rotator input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
   .cva-stack { position: relative; height: 220px; }
@@ -204,10 +196,10 @@
 
   /* ── Responsive ── */
   @media (max-width: 700px) {
-    .two-col { grid-template-columns: 1fr; }
-    .image-col { order: -1; }
     .cva-stack { height: 260px; }
     .hero-logo { flex: 0 0 160px; }
+    .partner-photo { margin: -20px -18px 0; }
+    .partner-photo img { height: 180px; }
   }
 </style>
 
@@ -246,65 +238,58 @@
     </div>
   </div>
 
-  <!-- PARTNERSHIP + VIRTUAL SOLUTIONS — two column wrapping the image -->
-  <div class="two-col">
+  <!-- PARTNERSHIP + VIRTUAL SOLUTIONS — merged card -->
+  <div class="content-card">
 
-    <!-- LEFT: Partnership text + VS text + card rotator -->
-    <div class="two-col-text">
-
-      <!-- Partnership -->
-      <div class="partnership-block">
-        <span class="section-label">How It Works</span>
-        <h2 class="section-heading">A Partnership</h2>
-        <p class="section-body">CVA works alongside local schools &mdash; not in place of them. School counselors help students and families determine whether a CVA course is the right fit and facilitate the enrollment process. Once enrolled, <strong>CVA provides the online instruction, highly qualified teachers, and Georgia/CCSD-aligned curriculum</strong>. The home school remains the student&rsquo;s foundation, while CVA provides flexible options to support their academic path.</p>
-      </div>
-
-      <!-- Virtual Solutions -->
-      <div class="vs-block">
-        <span class="section-label">Virtual Solutions</span>
-        <h2 class="section-heading">Who CVA Serves</h2>
-        <p class="section-body"><strong>CVA gives students flexible options when a traditional schedule does not meet every need.</strong> Some students use CVA to access a course that may not fit into their local school schedule, while others use it to stay on track for graduation, make room for specialized programs, or balance school with outside commitments. CVA gives students another path for completing coursework when online learning is the right fit. Whether a student is a competitive athlete managing a demanding practice schedule, a working artist balancing professional commitments with academics, or simply someone who learns better outside a traditional classroom, CVA is designed to meet them where they are. <strong>Online learning at CVA is not a shortcut. It is a rigorous, structured alternative that holds students to the same high standards.</strong></p>
-
-        <!-- Card rotator -->
-        <div class="cva-card-rotator">
-          <input type="radio" name="cva-card" id="card1" checked>&nbsp;
-          <input type="radio" name="cva-card" id="card2">&nbsp;
-          <input type="radio" name="cva-card" id="card3">&nbsp;
-          <input type="radio" name="cva-card" id="card4">&nbsp;
-          <input type="radio" name="cva-card" id="card5">&nbsp;
-          <input type="radio" name="cva-card" id="card6">
-          <div class="cva-stack">
-            <div class="cva-shadow cva-shadow-two"><br></div>
-            <div class="cva-shadow cva-shadow-one"><br></div>
-            <div class="cva-card card-one"><div class="cva-number">01</div><h3>Course Access</h3><p>Students needing a class not offered at their local school</p></div>
-            <div class="cva-card card-two"><div class="cva-number">02</div><h3>Flexibility</h3><p>Students requiring extra flexibility in their daily schedule</p></div>
-            <div class="cva-card card-three"><div class="cva-number">03</div><h3>Different Schedule</h3><p>Students who learn better outside a traditional schedule</p></div>
-            <div class="cva-card card-four"><div class="cva-number">04</div><h3>Professional Artists</h3><p>Students working as professional artists</p></div>
-            <div class="cva-card card-five"><div class="cva-number">05</div><h3>Athletics</h3><p>Students competing in athletics at a high level</p></div>
-            <div class="cva-card card-six"><div class="cva-number">06</div><h3>Graduation Needs</h3><p>Students needing access to a class for graduation</p></div>
-          </div>
-          <div class="cva-card-nav">
-            <label for="card1">1</label>
-            <label for="card2">2</label>
-            <label for="card3">3</label>
-            <label for="card4">4</label>
-            <label for="card5">5</label>
-            <label for="card6">6</label>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /two-col-text -->
-
-    <!-- RIGHT: image + callout, sticky alongside both sections -->
-    <div class="image-col">
-      <div class="partnership-card">
-        <img src="https://media.cobbk12.org/media/WWWCobb/frl/partnership-image.ecf8cf129385.png" alt="Partnership between CVA, schools, and families" class="fr-fil fr-dib">
-      </div>
-      <div class="callout"><strong>CVA is not a replacement for school.</strong> Students remain connected to their home schools while gaining access to flexible, rigorous course options. They build the independence, confidence, and skills they need to graduate ready for what comes next.</div>
+    <!-- Full-width photo -->
+    <div class="partner-photo">
+      <img src="https://media.cobbk12.org/media/WWWCobb/frl/partnership-image.ecf8cf129385.png" alt="Partnership between CVA, schools, and families" class="fr-fil fr-dib">
     </div>
 
-  </div><!-- /two-col -->
+    <!-- Callout below photo -->
+    <div class="callout" style="margin-bottom:28px;"><strong>CVA is not a replacement for school.</strong> Students remain connected to their home schools while gaining access to flexible, rigorous course options. They build the independence, confidence, and skills they need to graduate ready for what comes next.</div>
+
+    <!-- Partnership text -->
+    <span class="section-label">How It Works</span>
+    <h2 class="section-heading">A Partnership</h2>
+    <p class="section-body">CVA works alongside local schools &mdash; not in place of them. School counselors help students and families determine whether a CVA course is the right fit and facilitate the enrollment process. Once enrolled, <strong>CVA provides the online instruction, highly qualified teachers, and Georgia/CCSD-aligned curriculum</strong>. The home school remains the student&rsquo;s foundation, while CVA provides flexible options to support their academic path.</p>
+
+    <!-- Divider -->
+    <hr class="section-divider">
+
+    <!-- Virtual Solutions text -->
+    <span class="section-label">Virtual Solutions</span>
+    <h2 class="section-heading">Who CVA Serves</h2>
+    <p class="section-body" style="margin-bottom:28px;"><strong>CVA gives students flexible options when a traditional schedule does not meet every need.</strong> Some students use CVA to access a course that may not fit into their local school schedule, while others use it to stay on track for graduation, make room for specialized programs, or balance school with outside commitments. CVA gives students another path for completing coursework when online learning is the right fit. Whether a student is a competitive athlete managing a demanding practice schedule, a working artist balancing professional commitments with academics, or simply someone who learns better outside a traditional classroom, CVA is designed to meet them where they are. <strong>Online learning at CVA is not a shortcut. It is a rigorous, structured alternative that holds students to the same high standards.</strong></p>
+
+    <!-- Card rotator -->
+    <div class="cva-card-rotator">
+      <input type="radio" name="cva-card" id="card1" checked>&nbsp;
+      <input type="radio" name="cva-card" id="card2">&nbsp;
+      <input type="radio" name="cva-card" id="card3">&nbsp;
+      <input type="radio" name="cva-card" id="card4">&nbsp;
+      <input type="radio" name="cva-card" id="card5">&nbsp;
+      <input type="radio" name="cva-card" id="card6">
+      <div class="cva-stack">
+        <div class="cva-shadow cva-shadow-two"><br></div>
+        <div class="cva-shadow cva-shadow-one"><br></div>
+        <div class="cva-card card-one"><div class="cva-number">01</div><h3>Course Access</h3><p>Students needing a class not offered at their local school</p></div>
+        <div class="cva-card card-two"><div class="cva-number">02</div><h3>Flexibility</h3><p>Students requiring extra flexibility in their daily schedule</p></div>
+        <div class="cva-card card-three"><div class="cva-number">03</div><h3>Different Schedule</h3><p>Students who learn better outside a traditional schedule</p></div>
+        <div class="cva-card card-four"><div class="cva-number">04</div><h3>Professional Artists</h3><p>Students working as professional artists</p></div>
+        <div class="cva-card card-five"><div class="cva-number">05</div><h3>Athletics</h3><p>Students competing in athletics at a high level</p></div>
+        <div class="cva-card card-six"><div class="cva-number">06</div><h3>Graduation Needs</h3><p>Students needing access to a class for graduation</p></div>
+      </div>
+      <div class="cva-card-nav">
+        <label for="card1">1</label>
+        <label for="card2">2</label>
+        <label for="card3">3</label>
+        <label for="card4">4</label>
+        <label for="card5">5</label>
+        <label for="card6">6</label>
+      </div>
+    </div>
+  </div><!-- /merged card -->
 
   <!-- VIABLE & PROVEN -->
   <div class="content-card">
