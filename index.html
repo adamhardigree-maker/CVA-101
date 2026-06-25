@@ -1,5 +1,7 @@
+<p>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+</p>
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Montserrat:wght@400;600;700;900&display=swap'); @import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
 	/* ── Reset & base ── */
 	
 	.page-wrap,
@@ -42,6 +44,20 @@
 	.about-banner img {
 		width: 100%; height: auto; display: block;
 	}
+	
+	.about-banner + hr {
+		border: none; border-top: 1px solid var(--border); margin: 0 0 4px;
+	}
+	/* ── Eyebrow / labels ── */
+	
+	.page-wrap .eyebrow,
+	.page-wrap .section-label {
+		font-size: 12px !important; letter-spacing: .13em; text-transform: uppercase; color: var(--red) !important; font-weight: 800 !important; margin-bottom: 6px; display: block; font-family: 'Montserrat', Arial, sans-serif !important;
+	}
+	
+	.page-wrap .eyebrow {
+		margin-bottom: 10px;
+	}
 	/* ── Hero card ── */
 	
 	.hero-card {
@@ -49,11 +65,7 @@
 	}
 	
 	.hero-card-text {
-		flex: 1 1 320px;
-	}
-	
-	.page-wrap .eyebrow {
-		font-size: 12px !important; letter-spacing: .13em; text-transform: uppercase; color: var(--red) !important; font-weight: 800 !important; margin-bottom: 10px; display: block; font-family: 'Montserrat', Arial, sans-serif !important;
+		flex: 1 1 280px;
 	}
 	
 	.page-wrap .hero-card h1 {
@@ -61,7 +73,7 @@
 	}
 	
 	.hero-card p {
-		font-size: 15px; line-height: 1.7; color: #333; font-family: 'Montserrat', Arial, sans-serif;
+		font-size: 15px; line-height: 1.7; color: #333;
 	}
 	
 	.hero-logo {
@@ -78,7 +90,7 @@
 	}
 	
 	.fact-card {
-		flex: 1 1 180px; background: var(--white); border: 2px solid var(--border); border-top: 6px solid var(--red); border-radius: 14px; padding: 22px;
+		flex: 1 1 160px; background: var(--white); border: 2px solid var(--border); border-top: 6px solid var(--red); border-radius: 14px; padding: 22px;
 	}
 	
 	.fact-number {
@@ -88,26 +100,10 @@
 	.fact-card p {
 		font-size: 14px; line-height: 1.5; color: #333;
 	}
-	/* ── Merged card: full-width photo + callout ── */
+	/* ── Content card ── */
 	
-	.partner-photo {
-		margin: -28px -26px 0; overflow: hidden; border-radius: 12px 12px 0 0;
-	}
-	
-	.partner-photo img {
-		width: 100%; height: 260px; object-fit: cover; object-position: center 20%; display: block;
-	}
-	
-	.callout {
-		border-left: 6px solid var(--red); background: var(--white); padding: 16px 18px; font-size: 14px; line-height: 1.6; border-radius: 0 0 8px 8px; margin: 0 0 28px;
-	}
-	
-	.section-divider {
-		border: none; border-top: 2px solid var(--border); margin: 28px 0;
-	}
-	
-	.page-wrap .section-label {
-		font-size: 12px !important; letter-spacing: .13em; text-transform: uppercase; color: var(--red) !important; font-weight: 800 !important; margin-bottom: 6px; display: block; font-family: 'Montserrat', Arial, sans-serif !important;
+	.content-card {
+		background: var(--light); border: 1px solid var(--border); border-radius: 16px; padding: 28px 26px;
 	}
 	
 	.page-wrap .section-heading {
@@ -115,9 +111,28 @@
 	}
 	
 	.page-wrap .section-body {
-		font-size: 15px; line-height: 1.7; color: #333; font-family: 'Montserrat', Arial, sans-serif;
+		font-size: 15px; line-height: 1.7; color: #333;
 	}
-	/* ── Right column: image card + callout ── */
+	/* ── Partner photo ── */
+	
+	.partner-photo {
+		margin: -32px -26px 0; overflow: hidden; border-radius: 16px 16px 0 0;
+	}
+	
+	.partner-photo img {
+		width: 100%; height: 260px; object-fit: cover; object-position: center 20%; display: block; border-radius: 12px 12px 0 0;
+	}
+	/* ── Callout ── */
+	
+	.callout {
+		border-left: 6px solid var(--red); background: var(--light); padding: 16px 18px; font-size: 14px; line-height: 1.6; border-radius: 0 0 16px 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, .10);
+	}
+	/* ── Section divider ── */
+	
+	.section-divider {
+		border: none; border-top: 2px solid var(--border); margin: 28px 0;
+	}
+	/* ── Card rotator ── */
 	
 	.cva-card-rotator {
 		width: 100%;
@@ -137,11 +152,11 @@
 	}
 	
 	.cva-shadow-one {
-		transform: translate(10px, 10px) rotate(2deg); opacity: 0.4; z-index: 1;
+		transform: translate(10px, 10px) rotate(2deg); opacity: .4; z-index: 1;
 	}
 	
 	.cva-shadow-two {
-		transform: translate(20px, 20px) rotate(4deg); opacity: 0.2; z-index: 0;
+		transform: translate(20px, 20px) rotate(4deg); opacity: .2; z-index: 0;
 	}
 	
 	.cva-card {
@@ -189,29 +204,7 @@
 	#card6:checked ~ .cva-card-nav label[for="card6"] {
 		background: var(--red);
 	}
-	/* ── Right column: image card + callout ── */
-	
-	.image-col {
-		display: flex; flex-direction: column; gap: 0;
-	}
-	
-	.partnership-card {
-		border-radius: 16px 16px 0 0; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
-	}
-	
-	.partnership-card img {
-		width: 100%; height: 200px; object-fit: cover; object-position: center 20%; display: block;
-	}
-	
-	.callout {
-		border-left: 6px solid var(--red); background: var(--light); padding: 16px 18px; font-size: 14px; line-height: 1.6; border-radius: 0 0 16px 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
-	}
-	/* ── Content cards (Viable & Proven, FAQ) ── */
-	
-	.content-card {
-		background: var(--light); border: 1px solid var(--border); border-radius: 16px; padding: 28px 26px;
-	}
-	/* ── FAQ search — matches resource hub ── */
+	/* ── FAQ search ── */
 	
 	.search-label {
 		font-size: 12px; letter-spacing: .13em; text-transform: uppercase; color: var(--red); font-weight: 800; margin-bottom: 8px; display: block;
@@ -222,7 +215,7 @@
 	}
 	
 	.search-wrap:focus-within {
-		border-color: var(--red); box-shadow: 0 0 0 2px rgba(187, 0, 0, 0.1);
+		border-color: var(--red); box-shadow: 0 0 0 2px rgba(187, 0, 0, .1);
 	}
 	
 	.search-wrap .ti-search {
@@ -244,7 +237,7 @@
 	#faq-clear:hover {
 		color: var(--red); background: #fce8e8;
 	}
-	/* Results dropdown */
+	/* ── Search results ── */
 	
 	.faq-results {
 		width: 100%; margin-bottom: 16px; display: none;
@@ -289,7 +282,7 @@
 	.faq-results-hint {
 		padding: 7px 14px; font-size: 12px; color: #aaa; background: #fafafa; border-top: 1px solid #f0f0f0; text-align: right;
 	}
-	/* Highlight pulse */
+	/* ── Highlight pulse ── */
 	
 	.faq-highlight {
 		border: 2px solid var(--red) !important; animation: faq-pulse 1s ease-out infinite;
@@ -297,7 +290,7 @@
 	
 	@keyframes faq-pulse {
 		0% {
-			box-shadow: 0 0 0 0 rgba(187, 0, 0, 0.5);
+			box-shadow: 0 0 0 0 rgba(187, 0, 0, .5);
 		}
 		60% {
 			box-shadow: 0 0 0 10px rgba(187, 0, 0, 0);
@@ -306,7 +299,7 @@
 			box-shadow: 0 0 0 0 rgba(187, 0, 0, 0);
 		}
 	}
-	/* ── Accordion ── */
+	/* ── FAQ accordion ── */
 	
 	.accordion-item {
 		border: 1px solid var(--border); border-radius: 6px; margin-bottom: 10px; overflow: hidden; background: #1e1e1e;
@@ -339,7 +332,12 @@
 	.accordion-body a {
 		color: var(--red); text-decoration: underline;
 	}
-	/* ── Responsive ── */
+	/* ── Footer ── */
+	
+	.page-footer {
+		border: none; border-top: 1px solid var(--border); margin: 14px 0 0; padding-top: 14px; font-family: Oswald, Arial, sans-serif; font-size: 22px; color: #63666A; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-align: center;
+	}
+	/* ── Responsive: 700px ── */
 	
 	@media (max-width: 700px) {
 		.cva-stack {
@@ -348,22 +346,67 @@
 		.hero-logo {
 			flex: 0 0 160px;
 		}
+		.partner-photo img {
+			height: 180px;
+		}
+	}
+	/* ── Responsive: 640px ── */
+	
+	@media (max-width: 640px) {
+		.page-wrap {
+			padding: 0 14px 36px; gap: 12px;
+		}
+		.hero-card {
+			padding: 20px 18px;
+		}
+		.hero-logo {
+			flex: 0 0 130px;
+		}
+		.hero-logo img {
+			max-width: 130px;
+		}
+		.content-card {
+			padding: 20px 18px;
+		}
+		/* Partner photo margin must match content-card padding */
 		.partner-photo {
 			margin: -20px -18px 0;
 		}
-		.partner-photo img {
-			height: 180px;
+		.fact-card {
+			padding: 18px;
+		}
+		.accordion-body {
+			padding: 14px;
+		}
+		/* Reduce padding on inner FAQ content panels without touching text */
+		.accordion-body > div[style*="padding:24px"] {
+			padding: 16px !important;
+		}
+		.cva-stack {
+			height: 280px;
+		}
+		.page-footer {
+			font-size: 18px;
+		}
+	}
+	/* ── Responsive: 420px (very small phones) ── */
+	
+	@media (max-width: 420px) {
+		.hero-card {
+			flex-direction: column-reverse; gap: 16px;
+		}
+		.hero-logo {
+			flex: 0 0 auto; align-self: flex-start;
+		}
+		.cva-stack {
+			height: 300px;
 		}
 	}
 
 </style>
 <!-- BANNER -->
 <div class="about-banner"><img src="https://media.cobbk12.org/media/WWWCobb/medialib/cva-about-header.3598ec129326.png" alt="Banner image showing students with overlay text reading Cobb Virtual Academy" class="fr-fil fr-dib"></div>
-<hr>
-
-<p>
-	<br>
-</p>
+<hr style="border: none; border-top: 1px solid #d9dde3; margin: 0;">
 <div class="page-wrap">
 	<!-- HERO -->
 	<div class="hero-card">
@@ -402,81 +445,14 @@
 		<h2 class="section-heading">A Partnership</h2>
 
 		<p class="section-body">CVA works alongside local schools &mdash; not in place of them. School counselors help students and families determine whether a CVA course is the right fit and facilitate the enrollment process. Once enrolled, <strong>CVA provides the online instruction, highly qualified teachers, and Georgia/CCSD-aligned curriculum</strong>. The home school remains the student&rsquo;s foundation, while CVA provides flexible options to support their academic path.</p>
-		<!-- Divider -->
 		<hr class="section-divider">
 		<!-- Virtual Solutions text --><span class="section-label">Virtual Solutions</span>
 
 		<h2 class="section-heading">Who CVA Serves</h2>
 
 		<p class="section-body" style="margin-bottom:28px;"><strong>CVA gives students flexible options when a traditional schedule does not meet every need.</strong> Some students use CVA to access a course that may not fit into their local school schedule, while others use it to stay on track for graduation, make room for specialized programs, or balance school with outside commitments. CVA gives students another path for completing coursework when online learning is the right fit. Whether a student is a competitive athlete managing a demanding practice schedule, a working artist balancing professional commitments with academics, or simply someone who learns better outside a traditional classroom, CVA is designed to meet them where they are. <strong>Online learning at CVA is not a shortcut. It is a rigorous, structured alternative that holds students to the same high standards.</strong></p>
-		<!-- Card rotator -->
-		<div class="cva-card-rotator">
-			<input type="radio" name="cva-card" id="card1" checked="true">&nbsp;
-			<input type="radio" name="cva-card" id="card2">&nbsp;
-			<input type="radio" name="cva-card" id="card3">&nbsp;
-			<input type="radio" name="cva-card" id="card4">&nbsp;
-			<input type="radio" name="cva-card" id="card5">&nbsp;
-			<input type="radio" name="cva-card" id="card6">
-			<div class="cva-stack">
-				<div class="cva-shadow cva-shadow-two">
-					<br>
-				</div>
-				<div class="cva-shadow cva-shadow-one">
-					<br>
-				</div>
-				<div class="cva-card card-one">
-					<div class="cva-number">01</div>
-
-					<h3>Course Access</h3>
-
-					<p>Students needing a class not offered at their local school</p>
-				</div>
-				<div class="cva-card card-two">
-					<div class="cva-number">02</div>
-
-					<h3>Flexibility</h3>
-
-					<p>Students requiring extra flexibility in their daily schedule</p>
-				</div>
-				<div class="cva-card card-three">
-					<div class="cva-number">03</div>
-
-					<h3>Different Schedule</h3>
-
-					<p>Students who learn better outside a traditional schedule</p>
-				</div>
-				<div class="cva-card card-four">
-					<div class="cva-number">04</div>
-
-					<h3>Professional Artists</h3>
-
-					<p>Students working as professional artists</p>
-				</div>
-				<div class="cva-card card-five">
-					<div class="cva-number">05</div>
-
-					<h3>Athletics</h3>
-
-					<p>Students competing in athletics at a high level</p>
-				</div>
-				<div class="cva-card card-six">
-					<div class="cva-number">06</div>
-
-					<h3>Graduation Needs</h3>
-
-					<p>Students needing access to a class for graduation</p>
-				</div></div>
-			<div class="cva-card-nav">
-				<label for="card1">1</label>
-				<label for="card2">2</label>
-				<label for="card3">3</label>
-				<label for="card4">4</label>
-				<label for="card5">5</label>
-				<label for="card6">6</label>
-			</div></div></div>
-	<!-- /merged card -->
-	<!-- VIABLE & PROVEN -->
-	<div class="content-card"><span class="section-label">Evidence-Based</span>
+		<hr class="section-divider">
+		<!-- Evidence Based text --><span class="section-label">Evidence Based</span>
 
 		<h2 class="section-heading">Viable &amp; Proven</h2>
 
@@ -487,7 +463,7 @@
 
 		<h2 class="section-heading">Frequently Asked Questions</h2>
 
-		<p class="section-body" style="margin-bottom:18px;">Have questions about CVA? Find answers to the most common questions from students, families, and schools below. Use the search bar to jump directly to a topic, or browse all questions by scrolling through the list. If you don&rsquo;t find what you&rsquo;re looking for, reach out to your home school counselor or <a href="https://www.cobbk12.org/cobbvirtualacademy/contact-us" target="_blank" rel="noopener noreferrer" style="color:var(--red);text-decoration:underline;">visit the Contact Us page to directly reach out to CVA</a>.</p><span class="search-label">Search Keywords</span>
+		<p class="section-body" style="margin-bottom:18px;">Have questions about CVA? Find answers to the most common questions from students, families, and schools below. Use the search bar to jump directly to a topic, or browse all questions by scrolling through the list. If you don&rsquo;t find what you&rsquo;re looking for, reach out to your home school counselor or visit the <strong><a href="https://www.cobbk12.org/cobbvirtualacademy/contact-us" target="_blank" rel="noopener noreferrer" style="color:var(--red);text-decoration:underline;">Contact Us</a> &nbsp;</strong>page to directly reach out to CVA.</p><span class="search-label">Search Keywords</span>
 		<div class="search-wrap" id="faq-search-wrap">
 			<div id="faq-input" contenteditable="true" spellcheck="false" data-placeholder="e.g. enroll, grades, AP, IEP, technology…">
 				<br>
@@ -499,7 +475,6 @@
 			<summary>How do I enroll in a CVA course?</summary>
 			<div class="accordion-body">
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">Before You Register</p>
@@ -508,23 +483,20 @@
 
 						<p style="font-size:16px; line-height:1.6; margin:0;">Before beginning registration, make sure you have the information below available. This will help the registration process go more smoothly.</p>
 					</div>
-					<!-- ALL STUDENTS CHECKLIST -->
 					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:20px; margin-bottom:18px; box-sizing:border-box;">
 
 						<h4 style="font-family:Oswald, Arial, sans-serif; font-size:22px; line-height:1.2; color:#000000; font-weight:700; text-transform:uppercase; margin:0 0 8px 0;">All Students</h4>
 
 						<p style="font-size:15px; line-height:1.55; margin:0 0 16px 0; color:#222222;">Before beginning registration, make sure you have the following information ready.</p>
 						<div style="display:grid; grid-template-columns:1fr; gap:12px;">
-							<!-- CHECKLIST ITEM 1 -->
 							<div style="background:#ffffff; border:1px solid #d9dde3; border-left:5px solid #BB0000; border-radius:12px; padding:16px; box-sizing:border-box; display:flex; gap:12px; align-items:flex-start;">
 								<div style="background:#BB0000; color:#ffffff; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; flex:0 0 28px; line-height:28px; text-align:center;">✓</div>
 								<div style="flex:1;">
 
 									<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">Student Email Address</h5>
 
-									<p style="font-size:15px; line-height:1.55; margin:0;">Students must have an email account for use with their CVA courses. <strong>Use your CCSD student email account and be sure to check it regularly.&nbsp;</strong></p>
+									<p style="font-size:15px; line-height:1.55; margin:0;">Students must have an email account for use with their CVA courses. <strong>Use your CCSD student email account and be sure to check it regularly.</strong></p>
 								</div></div>
-							<!-- CHECKLIST ITEM 2 -->
 							<div style="background:#ffffff; border:1px solid #d9dde3; border-left:5px solid #BB0000; border-radius:12px; padding:16px; box-sizing:border-box; display:flex; gap:12px; align-items:flex-start;">
 								<div style="background:#BB0000; color:#ffffff; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; flex:0 0 28px; line-height:28px; text-align:center;">✓</div>
 								<div style="flex:1;">
@@ -533,16 +505,14 @@
 
 									<p style="font-size:15px; line-height:1.55; margin:0;">The primary mode of communication is email. <strong>Parents/guardians should use an active email address that is checked regularly.</strong> Parent email addresses must be different from the student&rsquo;s email account.</p>
 								</div></div>
-							<!-- CHECKLIST ITEM 3 -->
 							<div style="background:#ffffff; border:1px solid #d9dde3; border-left:5px solid #BB0000; border-radius:12px; padding:16px; box-sizing:border-box; display:flex; gap:12px; align-items:flex-start;">
 								<div style="background:#BB0000; color:#ffffff; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; flex:0 0 28px; line-height:28px; text-align:center;">✓</div>
 								<div style="flex:1;">
 
 									<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">CVA Course Information</h5>
 
-									<p style="font-size:15px; line-height:1.55; margin:0;">Students should know the course name, such as American Literature, and the section: A, B, or Y. Check the <a href="https://www.cobbk12.org/cobbvirtualacademy/cva-course-hub" target="_blank" rel="noopener noreferrer" style="color:#BB0000; font-weight:800; text-decoration:underline;">CVA Course Catalog on the CVA Registration Hub</a> for available courses.</p>
+									<p style="font-size:15px; line-height:1.55; margin:0;">Students should know the course name, such as American Literature, and the section: A, B, or Y. Check the <a href="https://www.cobbk12.org/cobbvirtualacademy/registration-hub" target="_blank" rel="noopener noreferrer" style="color:#BB0000; font-weight:800; text-decoration:underline;">CVA Course Catalog on the CVA Registration Hub</a> for available courses.</p>
 								</div></div></div></div>
-					<!-- CCSD STUDENTS -->
 					<div style="background:#ffffff; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 14px 0;">CCSD Students</h4>
@@ -560,10 +530,9 @@
 								<p style="font-size:15px; line-height:1.55; margin:0;">For summer-term registration between 8th and 9th grade, choose your current grade level and middle school.</p>
 							</div></div>
 
-						<p style="font-size:15px; line-height:1.55; margin:16px 0 0 0;">Check the <a href="https://www.cobbk12.org/cobbvirtualacademy/cva-course-hub" target="_blank" rel="noopener noreferrer"><strong>CVA Registration Hub</strong></a> for additional registration information.</p>
+						<p style="font-size:15px; line-height:1.55; margin:16px 0 0 0;">Check the <a href="https://www.cobbk12.org/cobbvirtualacademy/register-now" target="_blank" rel="noopener noreferrer"><strong>Register</strong></a> page for additional registration information.</p>
 					</div>
-					<!-- IMPORTANT NOTES -->
-					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
+					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 14px 0;">Important Notes</h4>
 						<div style="display:grid; grid-template-columns:1fr; gap:12px;">
@@ -577,17 +546,13 @@
 							</div>
 							<div style="background:#ffffff; border-radius:12px; padding:15px; box-sizing:border-box;">
 
-								<p style="font-size:15px; line-height:1.55; margin:0;"><strong>Deadlines:&nbsp;</strong>Students registering past CCSD&#39;s last day for schedule changes in a semester may have their CVA course registrations denied. Please speak with your counselor before registering.</p>
-							</div></div></div>
-					<!-- SB 42 CALLOUT -->
-				</div></div>
+								<p style="font-size:15px; line-height:1.55; margin:0;"><strong>Deadlines:</strong> Students registering past CCSD&rsquo;s last day for schedule changes in a semester may have their CVA course registrations denied. Please speak with your counselor before registering.</p>
+							</div></div></div></div></div>
 		</details>
 		<details class="accordion-item" id="faq-transcript">
 			<summary>Will my CVA course grade appear on my transcript?</summary>
 			<div class="accordion-body">
-				<!-- CVA COURSE GRADE PAGE -->
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">CVA Grades</p>
@@ -596,8 +561,7 @@
 
 						<p style="font-size:16px; line-height:1.6; margin:0;">Yes. Your CVA course grade goes on your permanent academic record, just like any class taken at your home school.</p>
 					</div>
-					<!-- WHAT THIS MEANS -->
-					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
+					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 14px 0;">What This Means</h4>
 						<div style="display:grid; grid-template-columns:1fr; gap:12px;">
@@ -615,7 +579,7 @@
 
 									<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">GPA and Eligibility</h5>
 
-									<p style="font-size:15px; line-height:1.55; margin:0;">Your CVA grade counts toward your GPA and affects graduation requirements, college admission, and athletic eligibility. All CVA courses meet NCAA eligibility.&nbsp;</p>
+									<p style="font-size:15px; line-height:1.55; margin:0;">Your CVA grade counts toward your GPA and affects graduation requirements, college admission, and athletic eligibility. All CVA courses meet NCAA eligibility.</p>
 								</div></div>
 							<div style="background:#ffffff; border:1px solid #d9dde3; border-left:5px solid #BB0000; border-radius:12px; padding:16px; box-sizing:border-box; display:flex; gap:12px; align-items:flex-start;">
 								<div style="background:#BB0000; color:#ffffff; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:800; flex:0 0 28px; line-height:28px; text-align:center;">✓</div>
@@ -632,16 +596,12 @@
 									<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">ParentVUE and StudentVUE</h5>
 
 									<p style="font-size:15px; line-height:1.55; margin:0;">Grades are visible to students and parents through the standard parent portal.</p>
-								</div></div></div></div>
-					<!-- IMPORTANT NOTE -->
-				</div></div>
+								</div></div></div></div></div></div>
 		</details>
 		<details class="accordion-item" id="faq-difficulty">
 			<summary>Are CVA courses easier than in-person classes?</summary>
 			<div class="accordion-body">
-				<!-- CVA COURSE DIFFICULTY PAGE -->
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">CVA Courses</p>
@@ -650,8 +610,7 @@
 
 						<p style="font-size:16px; line-height:1.6; margin:0;">No. This is one of the most common misconceptions about online courses. A CVA course is not easier because it is online.</p>
 					</div>
-					<!-- WHAT THIS MEANS -->
-					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
+					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 14px 0;">What This Means</h4>
 						<div style="display:grid; grid-template-columns:1fr; gap:12px;">
@@ -686,26 +645,21 @@
 									<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">Self-Directed Learning</h5>
 
 									<p style="font-size:15px; line-height:1.55; margin:0;">Online learning can feel more demanding for students who are not prepared to manage their time, follow directions carefully, and complete work independently.</p>
-								</div></div></div></div>
-					<!-- IMPORTANT NOTE -->
-				</div></div>
+								</div></div></div></div></div></div>
 		</details>
 		<details class="accordion-item" id="faq-time">
 			<summary>How much time should I expect to spend on a CVA course each week?</summary>
 			<div class="accordion-body">
-				<!-- CVA COURSE TIME COMMITMENT PAGE -->
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">CVA Courses</p>
 
 						<h3 style="font-family: Oswald, Arial, sans-serif; font-size:28px; line-height:1.2; color:#000000; font-weight:700; text-transform:uppercase; margin:0 0 10px 0;">How Much Time Should I Spend?</h3>
 
-						<p style="font-size:16px; line-height:1.6; margin:0;">Students should expect to spend the equivalent of a regular class period on their CVA course each day that it is scheduled.<strong>&nbsp;CVA offers flexibility, but flexibility does not mean less time.</strong> Students should treat their CVA course like a regular class and plan for it each scheduled day.</p>
+						<p style="font-size:16px; line-height:1.6; margin:0;">Students should expect to spend the equivalent of a regular class period on their CVA course each day that it is scheduled. <strong>CVA offers flexibility, but flexibility does not mean less time.</strong> Students should treat their CVA course like a regular class and plan for it each scheduled day.</p>
 					</div>
-					<!-- WHAT THIS MEANS -->
-					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
+					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 14px 0;">What This Means</h4>
 						<div style="display:grid; grid-template-columns:1fr; gap:12px;">
@@ -740,33 +694,25 @@
 									<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">Stay on Schedule</h5>
 
 									<p style="font-size:15px; line-height:1.55; margin:0;">Students are most successful when they set aside regular time for their CVA course and avoid waiting until the last minute.</p>
-								</div></div></div></div>
-					<!-- IMPORTANT NOTE -->
-				</div></div>
+								</div></div></div></div></div></div>
 		</details>
 		<details class="accordion-item" id="faq-iep">
 			<summary>What if I have an IEP or 504 Plan?</summary>
 			<div class="accordion-body">
-				<!-- CVA ACCOMMODATIONS PAGE - SIMPLE CARD OPTION -->
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">Student Support</p>
 
 						<h3 style="font-family: Oswald, Arial, sans-serif; font-size:28px; line-height:1.2; color:#000000; font-weight:700; text-transform:uppercase; margin:0 0 10px 0;">Are IEP and 504 Plans Supported?</h3>
 
-						<p style="font-size:16px; line-height:1.6; margin:0;">Yes. Students with an IEP or 504 Plan are fully supported in CVA courses. Speak with your guidance counselor or reach out to<a href="mailto:cobbvirtualacademy@cobbk12.org"><strong>&nbsp;CVA Student Support</strong></a> to learn more.</p>
-					</div>
-					<!-- SIMPLE INFORMATION CARD -->
-				</div></div>
+						<p style="font-size:16px; line-height:1.6; margin:0;">Yes. Students with an IEP or 504 Plan are fully supported in CVA courses. Speak with your guidance counselor or reach out to <a href="mailto:cobbvirtualacademy@cobbk12.org"><strong>CVA Student Support</strong></a> to learn more.</p>
+					</div></div></div>
 		</details>
 		<details class="accordion-item" id="faq-homeschool">
 			<summary>Can I take a CVA course while also attending my home school?</summary>
 			<div class="accordion-body">
-				<!-- CVA HOME SCHOOL ENROLLMENT PAGE - SIMPLE CARD OPTION -->
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">CVA Enrollment</p>
@@ -775,34 +721,28 @@
 
 						<p style="font-size:16px; line-height:1.6; margin:0;">Yes. Most CVA students remain enrolled at their home school and take one or more CVA courses to supplement their regular schedule. CVA does not replace the home school experience for most students. Instead, it works with the home school to support the student&rsquo;s academic plan.</p>
 					</div>
-					<!-- SIMPLE INFORMATION CARD -->
-					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
+					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 10px 0;">How CVA Fits Into Your Schedule</h4>
 
 						<p style="font-size:15px; line-height:1.55; margin:0 0 12px 0;">CVA is designed to work alongside a student&rsquo;s existing coursework.</p>
 
 						<p style="font-size:15px; line-height:1.55; margin:0;">It gives students another way to take needed courses, create flexibility in their schedule, or supplement the classes they are already taking at their home school.</p>
-					</div>
-					<!-- IMPORTANT NOTE -->
-				</div></div>
+					</div></div></div>
 		</details>
 		<details class="accordion-item" id="faq-tech">
 			<summary>What technology do I need to take a CVA course?</summary>
 			<div class="accordion-body">
-				<!-- CVA TECHNOLOGY REQUIREMENTS PAGE - SIMPLE CARD OPTION -->
 				<div style="font-family: Montserrat, Arial, sans-serif; color:#222222; background:#ffffff; border:1px solid #d9dde3; border-radius:16px; padding:24px; box-sizing:border-box;">
-					<!-- INTRO -->
 					<div style="margin-bottom:22px;">
 
 						<p style="font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#BB0000; font-weight:800; margin:0 0 6px 0;">Technology Support</p>
 
 						<h3 style="font-family: Oswald, Arial, sans-serif; font-size:28px; line-height:1.2; color:#000000; font-weight:700; text-transform:uppercase; margin:0 0 10px 0;">Technology Requirements</h3>
 
-						<p style="font-size:16px; line-height:1.6; margin:0;">Before you start your CVA course, make sure you have the right device, software, and internet connection. <strong>All CCSD students are eligible to receive a district-supported laptop. Contact your local school for information on how to opt in to the student laptop program.&nbsp;</strong>Having the right setup from the beginning will help you avoid issues and stay focused on your work.</p>
+						<p style="font-size:16px; line-height:1.6; margin:0;">Before you start your CVA course, make sure you have the right device, software, and internet connection. <strong>All CCSD students are eligible to receive a district-supported laptop. Contact your local school for information on how to opt in to the student laptop program.</strong> Having the right setup from the beginning will help you avoid issues and stay focused on your work.</p>
 					</div>
-					<!-- SIMPLE INFORMATION CARD -->
-					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; margin-bottom:18px; box-sizing:border-box;">
+					<div style="background:#f7f7f7; border:1px solid #d9dde3; border-radius:14px; padding:18px; box-sizing:border-box;">
 
 						<h4 style="font-size:18px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 10px 0;">What You Need</h4>
 						<div style="display:grid; grid-template-columns:1fr; gap:12px;">
@@ -810,7 +750,7 @@
 
 								<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">Recommended Setup</h5>
 
-								<p style="font-size:15px; line-height:1.55; margin:0;">Students need access to a Windows PC or Mac computer. <strong>A district-supported laptop or device is recommended for the best CVA course experience.&nbsp;</strong>Mobile devices may not be compatible with all CVA coursework.&nbsp;</p>
+								<p style="font-size:15px; line-height:1.55; margin:0;">Students need access to a Windows PC or Mac computer. <strong>A district-supported laptop or device is recommended for the best CVA course experience.</strong> Mobile devices may not be compatible with all CVA coursework.</p>
 							</div>
 							<div style="background:#ffffff; border:1px solid #d9dde3; border-left:5px solid #BB0000; border-radius:12px; padding:16px; box-sizing:border-box;">
 
@@ -823,142 +763,141 @@
 								<h5 style="font-size:16px; line-height:1.3; color:#000000; font-weight:800; margin:0 0 6px 0;">Internet Access</h5>
 
 								<p style="font-size:15px; line-height:1.55; margin:0;">Students need reliable internet access to view course materials, complete assignments, and communicate with their teacher.</p>
-							</div></div></div>
-					<!-- IMPORTANT NOTE -->
-				</div></div>
+							</div></div></div></div></div>
 		</details>
 	</div>
-	<!-- /content-card FAQ -->
+	<!-- /FAQ content-card -->
 	<!-- FOOTER -->
-	<hr style="border:none; border-top:1px solid #d9dde3; margin:14px 0;">
+	<hr class="page-footer" style="font-size:22px; color:#63666A; font-weight:700; letter-spacing:1px; text-transform:uppercase; text-align:center; border:none; border-top:1px solid #d9dde3; padding-top:14px; font-family:Oswald,Arial,sans-serif;">
 
 	<p style="font-family:Oswald,Arial,sans-serif; font-size:22px; color:#63666A; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin:0; text-align:center;"><strong>Class. Virtually. Anywhere.</strong></p>
-</div>
-<!-- /page-wrap -->
-<script>
-	(function()
-	{
-		var inputEl = document.getElementById('faq-input');
-		var clearBtn = document.getElementById('faq-clear');
-		var resultsEl = document.getElementById('faq-results');
-
-		var items = Array.from(document.querySelectorAll('.accordion-item[id]')).map(function(el)
+	<!-- /page-wrap -->
+	<script>
+		(function()
 		{
-			var q = (el.querySelector('summary') ||
-			{}).textContent || '';
-			var a = (el.querySelector('.accordion-body') ||
-			{}).textContent || '';
-			return {
-				id: el.id,
-				question: q.trim(),
-				text: (q + ' ' + a).toLowerCase()
-			};
-		});
+			var inputEl = document.getElementById('faq-input');
+			var clearBtn = document.getElementById('faq-clear');
+			var resultsEl = document.getElementById('faq-results');
 
-		var highlightTimer = null;
-
-		function getInputText()
-		{
-			return (inputEl.textContent || inputEl.innerText || '').trim();
-		}
-
-		function clearResults()
-		{
-			resultsEl.innerHTML = '';
-			resultsEl.classList.remove('visible');
-		}
-
-		function scrollToItem(id)
-		{
-			var el = document.getElementById(id);
-			if (!el) return;
-			el.open = true;
-			el.scrollIntoView(
+			var items = Array.from(document.querySelectorAll('.accordion-item[id]')).map(function(el)
 			{
-				behavior: 'smooth',
-				block: 'center'
+				var q = (el.querySelector('summary') ||
+				{}).textContent || '';
+				var a = (el.querySelector('.accordion-body') ||
+				{}).textContent || '';
+				return {
+					id: el.id,
+					question: q.trim(),
+					text: (q + ' ' + a).toLowerCase()
+				};
 			});
-			el.classList.add('faq-highlight');
-			clearTimeout(highlightTimer);
-			highlightTimer = setTimeout(function()
-			{
-				el.classList.remove('faq-highlight');
-			}, 5000);
-		}
 
-		function renderResults(matches, term)
-		{
-			if (!term)
+			var highlightTimer = null;
+
+			function getInputText()
 			{
-				clearResults(); clearBtn.style.display = 'none';
-				return;
+				return (inputEl.textContent || inputEl.innerText || '').trim();
 			}
-			clearBtn.style.display = 'inline-block';
-			resultsEl.classList.add('visible');
-			if (matches.length === 0)
+
+			function clearResults()
 			{
-				resultsEl.innerHTML = '<div class="faq-results-list"><div class="faq-results-empty">No results found for &ldquo;' + term + '&rdquo;</div></div>';
-				return;
+				resultsEl.innerHTML = '';
+				resultsEl.classList.remove('visible');
 			}
-			var rows = matches.map(function(c)
+
+			function scrollToItem(id)
 			{
-				return '<div class="faq-result-item" data-id="' + c.id + '">' +
-					'<div class="faq-result-icon"><i class="ti ti-help" aria-hidden="true"></i></div>' +
-					'<div class="faq-result-title">' + c.question + '</div>' +
-					'</div>';
-			}).join('');
-			resultsEl.innerHTML = '<div class="faq-results-list">' + rows +
-				'<div class="faq-results-hint">Click a result to jump to that question</div></div>';
-			resultsEl.querySelectorAll('.faq-result-item').forEach(function(item)
-			{
-				item.addEventListener('click', function()
+				var el = document.getElementById(id);
+				if (!el) return;
+				el.open = true;
+				el.scrollIntoView(
 				{
-					scrollToItem(item.dataset.id);
+					behavior: 'smooth',
+					block: 'center'
 				});
-			});
-		}
-
-		function doSearch()
-		{
-			var term = getInputText().toLowerCase();
-			if (!term)
-			{
-				clearResults(); clearBtn.style.display = 'none';
-				return;
+				el.classList.add('faq-highlight');
+				clearTimeout(highlightTimer);
+				highlightTimer = setTimeout(function()
+				{
+					el.classList.remove('faq-highlight');
+				}, 5000);
 			}
-			renderResults(items.filter(function(c)
-			{
-				return c.text.includes(term);
-			}), term);
-		}
 
-		inputEl.addEventListener('input', doSearch);
-		inputEl.addEventListener('keydown', function(e)
-		{
-			if (e.keyCode === 13) e.preventDefault();
-		});
-		inputEl.addEventListener('paste', function(e)
-		{
-			e.preventDefault();
-			var text = (e.clipboardData || window.clipboardData).getData('text/plain');
-			document.execCommand('insertText', false, text);
-		});
-		clearBtn.addEventListener('click', function()
-		{
-			inputEl.textContent = '';
-			clearResults(); clearBtn.style.display = 'none';
-			inputEl.focus();
-		});
-		clearBtn.addEventListener('keydown', function(e)
-		{
-			if (e.keyCode === 13 || e.keyCode === 32)
+			function renderResults(matches, term)
+			{
+				if (!term)
+				{
+					clearResults(); clearBtn.style.display = 'none';
+					return;
+				}
+				clearBtn.style.display = 'inline-block';
+				resultsEl.classList.add('visible');
+				if (matches.length === 0)
+				{
+					resultsEl.innerHTML = '<div class="faq-results-list"><div class="faq-results-empty">No results found for &ldquo;' + term + '&rdquo;</div></div>';
+					return;
+				}
+				var rows = matches.map(function(c)
+				{
+					return '<div class="faq-result-item" data-id="' + c.id + '">' +
+						'<div class="faq-result-icon"><i class="ti ti-help" aria-hidden="true"></i></div>' +
+						'<div class="faq-result-title">' + c.question + '</div>' +
+						'</div>';
+				}).join('');
+				resultsEl.innerHTML = '<div class="faq-results-list">' + rows + '<div class="faq-results-hint">Click a result to jump to that question</div></div>';
+				resultsEl.querySelectorAll('.faq-result-item').forEach(function(item)
+				{
+					item.addEventListener('click', function()
+					{
+						scrollToItem(item.dataset.id);
+					});
+				});
+			}
+
+			function doSearch()
+			{
+				var term = getInputText().toLowerCase();
+				if (!term)
+				{
+					clearResults(); clearBtn.style.display = 'none';
+					return;
+				}
+				renderResults(items.filter(function(c)
+				{
+					return c.text.includes(term);
+				}), term);
+			}
+
+			inputEl.addEventListener('input', doSearch);
+			inputEl.addEventListener('keydown', function(e)
+			{
+				if (e.keyCode === 13) e.preventDefault();
+			});
+			inputEl.addEventListener('paste', function(e)
 			{
 				e.preventDefault();
+				var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+				document.execCommand('insertText', false, text);
+			});
+			clearBtn.addEventListener('click', function()
+			{
 				inputEl.textContent = '';
 				clearResults(); clearBtn.style.display = 'none';
 				inputEl.focus();
-			}
-		});
-	})();
+			});
+			clearBtn.addEventListener('keydown', function(e)
+			{
+				if (e.keyCode === 13 || e.keyCode === 32)
+				{
+					e.preventDefault();
+					inputEl.textContent = '';
+					clearResults(); clearBtn.style.display = 'none';
+					inputEl.focus();
+				}
+			});
+		})();
 
-</script>
+	</script>
+	<a href="https://www.cobbk12.org/cobbvirtualacademy/register-now" target="_blank" rel="noopener noreferrer">
+		<br>
+	</a></div>
